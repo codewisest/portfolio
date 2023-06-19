@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,700&display=swap");
+
+:root {
+  --main: #101630;
+  --varaint: #4a33c2;
+  --accent: #4fb7dc;
+  --fore_light: rgb(250, 250, 250);
+  --fore_dark: rgb(66, 66, 66);
+  --box_shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+  --box_glow: 0 0 20px 1px rgba(79, 183, 220, 0.8);
+  --tint_start: rgba(74, 51, 194, 0.5);
+  --tint_end: rgba(79, 183, 220, 0.8);
+  --border_gradient: linear-gradient(to right, #4a33c2, #4fb7dc);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--main);
+  color: var(--fore_light);
+  font-size: 16px;
+}
+
+body > .wrapper {
+  padding: 1rem;
+  font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fore_light);
+}
+
+.flex {
+  display: flex;
+}
+
+.col_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+}
+
+img {
+}
+
+/* HEADER SECTION */
+header > .container {
+  height: 80vh;
+}
+.header_top {
+  justify-content: space-between;
+}
+header img {
+  width: 120px;
+}
+
+header figcaption {
+  margin-top: 5px;
+  text-align: center;
+}
+
+nav li {
+  margin-left: 1rem;
+  background-image: var(--border_gradient);
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+}
+
+.hero {
+  height: 80%;
+}
+
+.hero > div {
+  height: 100%;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Source Serif 4", serif;
+  font-size: 5rem;
+  line-height: 4.3rem;
+  letter-spacing: 3px;
+}
+
+h1 > span:first-child {
+  display: block;
+}
+
+.hero > div > span {
+  color: var(--fore_dark);
+  font-size: 2rem;
+}
+
+/* MAIN SECTION */
+.about_image {
+  border: 0.4rem solid var(--accent);
+  width: 300px;
+  margin: 2rem auto;
+  border-radius: 15px;
+}
+.about_image > img,
+.project_image > img {
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  top: -20px;
+  right: 25px;
+}
+
+/* PROJECTS */
+.project_image {
+  border: 0.4rem solid var(--accent);
+  width: 70%;
+  margin: 2rem auto;
+  border-radius: 15px;
+  max-width: 500px;
+}
