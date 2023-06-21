@@ -26,7 +26,6 @@ html {
 }
 
 body > .wrapper {
-  padding: 1rem;
   font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -48,8 +47,13 @@ a {
   flex-direction: column;
 }
 
+.grid {
+  display: grid;
+}
+
 h2 {
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 p {
@@ -57,9 +61,14 @@ p {
   line-height: 1.5rem;
 }
 
-img {
+section:not(:first-child),
+footer {
+  margin-top: 8rem;
 }
 
+.container {
+  padding: 1rem;
+}
 /* HEADER SECTION */
 header > .container {
   height: 80vh;
@@ -112,7 +121,7 @@ h1 > span:first-child {
 .about_image {
   border: 0.4rem solid var(--accent);
   width: 300px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   border-radius: 15px;
 }
 .about_image > img,
@@ -128,7 +137,120 @@ h1 > span:first-child {
 .project_image {
   border: 0.4rem solid var(--accent);
   width: 70%;
-  margin: 2rem auto;
+  margin: 4rem auto;
   border-radius: 15px;
   max-width: 500px;
+}
+
+.project_text > h4 {
+  margin: 0.5rem 0;
+}
+
+/* TOOLS */
+.tech_tools {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tech_tools > figure {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 2rem 1rem;
+}
+
+.tech_tools img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tech_tools figcaption {
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+/* FOOTER */
+footer {
+  border-radius: 50px 50px 0 0;
+  background-image: var(--border_gradient);
+}
+
+.footer_main {
+  flex-direction: column;
+}
+
+.contact_detail {
+  display: flex;
+}
+
+.contact_detail > p {
+  margin-left: 10px;
+}
+
+.contact_detail .icon_background {
+  margin-bottom: 0.5rem;
+}
+
+.footer_summary > h3 {
+  margin-bottom: 0.5rem;
+}
+
+.contact_details {
+  margin: 2rem 0;
+}
+
+.footer_right {
+  width: 90%;
+  margin: 2rem auto;
+  background-image: linear-gradient(to left, #4a33c2, #4fb7dc);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: var(--box_glow);
+}
+
+.footer_right > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_bottom {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.footer_bottom > .logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.footer_bottom > .social {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-content: end;
+}
+
+.social img {
+  width: 25px;
+}
+
+.icon_background {
+  background-image: var(--border_gradient);
+  margin-left: 10px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  box-shadow: var(--box_glow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.copyright {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .logo > img {
+  width: 100px;
 }
