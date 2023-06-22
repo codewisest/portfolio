@@ -28,8 +28,8 @@
             </a>
             <nav class="no_small_display">
               <ul class="flex">
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -50,11 +50,11 @@
                 <p>
                   Welcome to my portfolio! I am an entry level web developer,
                   committed to learning and applying the fundamental principles
-                  that drive optimal user experiences. I am dedicated to
-                  creating visually appealing, responsive, functional,
-                  accessible and progressive web applications. Let's collaborate
-                  to bring your vision to life as I continue to grow and refine
-                  my web development skills.
+                  that drive optimal user experience. I am dedicated to creating
+                  visually appealing, responsive, functional, accessible and
+                  progressive web applications. Let's collaborate to bring your
+                  vision to life as I continue to grow and refine my web
+                  development skills.
                 </p>
               </div>
               <div class="about_image">
@@ -65,7 +65,7 @@
               </div>
             </div>
           </section>
-          <section class="projects">
+          <section id="projects" class="projects">
             <div class="container">
               <h2>Projects</h2>
               <div class="project">
@@ -151,6 +151,13 @@
                   <img src="./assets/images/js.png" alt="JavaScript logo" />
                   <figcaption>JavaScript</figcaption>
                 </figure>
+                <figure>
+                  <img
+                    src="./assets/images/pwa.png"
+                    alt="Progressive Web App logo"
+                  />
+                  <figcaption>PWAs</figcaption>
+                </figure>
               </div>
             </div>
           </section>
@@ -190,7 +197,7 @@
                 </div>
               </div>
             </div>
-            <div class="footer_right">
+            <div id="contact" class="footer_right">
               <form action="#" method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Name" />
@@ -203,6 +210,7 @@
                   placeholder="type your message"
                   rows="10"
                 ></textarea>
+                <button class="icon_background flex">Send</button>
               </form>
             </div>
           </div>

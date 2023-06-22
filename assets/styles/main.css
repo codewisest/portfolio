@@ -23,6 +23,7 @@ html {
   background-color: var(--main);
   color: var(--fore_light);
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body > .wrapper {
@@ -173,6 +174,7 @@ h1 > span:first-child {
 footer {
   border-radius: 50px 50px 0 0;
   background-image: var(--border_gradient);
+  text-shadow: #000;
 }
 
 .footer_main {
@@ -189,6 +191,7 @@ footer {
 
 .contact_detail .icon_background {
   margin-bottom: 0.5rem;
+  padding: 5px 8px;
 }
 
 .footer_summary > h3 {
@@ -213,6 +216,32 @@ footer {
   flex-direction: column;
 }
 
+label {
+  margin-bottom: 5px;
+}
+.footer_right > form > input,
+textarea {
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main);
+  margin: 0 0 15px 0;
+}
+
+.footer_right form button {
+  width: 150px;
+  align-self: center;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--fore_light);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 .footer_bottom {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -230,13 +259,13 @@ footer {
 }
 
 .social img {
-  width: 25px;
+  width: 20px;
 }
 
 .icon_background {
   background-image: var(--border_gradient);
   margin-left: 10px;
-  padding: 3px 8px;
+  padding: 0 8px;
   border-radius: 5px;
   box-shadow: var(--box_glow);
   display: flex;
