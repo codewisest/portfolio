@@ -74,14 +74,21 @@
 
   .project_text {
     width: 55%;
-    padding: 1rem;
+    /* padding: 1rem; */
     align-self: center;
+  }
+
+  .project:nth-child(even) > .project_text {
+    margin-left: 3rem;
+  }
+
+  .project:nth-child(odd) > .project_text {
+    margin-right: 3rem;
   }
 
   .project_image {
     align-self: center;
     margin: 0;
-    padding: 1rem;
   }
 
   .project:nth-child(even) {
@@ -97,6 +104,10 @@
 
   .project_image {
     width: 40%;
+  }
+
+  .project_image img {
+    top: -30px;
   }
 
   .tech_tools > figure {
