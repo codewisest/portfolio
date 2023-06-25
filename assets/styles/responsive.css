@@ -111,6 +111,15 @@
     line-height: 2rem;
   }
 
+  .project {
+    max-width: 1000px;
+  }
+
+  .tech_tools {
+    max-width: 1000px;
+    margin: auto;
+  }
+
   .footer_main {
     flex-direction: row;
     justify-content: space-between;
