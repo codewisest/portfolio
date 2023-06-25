@@ -2,12 +2,13 @@
 
 :root {
   --main: #101630;
-  --varaint: #4a33c2;
+  --varaint: rgb(74, 51, 194);
   --accent: #4fb7dc;
   --fore_light: rgb(250, 250, 250);
   --fore_dark: rgb(66, 66, 66);
   --box_shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
   --box_glow: 0 0 20px 1px rgba(79, 183, 220, 0.8);
+  --box_glow_reverse: 0 0 20px 1px rgba(74, 51, 194, 0.8);
   --tint_start: rgba(74, 51, 194, 0.5);
   --tint_end: rgba(79, 183, 220, 0.8);
   --border_gradient: linear-gradient(to right, #4a33c2, #4fb7dc);
@@ -277,7 +278,7 @@ textarea {
 
 .social .icon_background {
   background-image: var(--border_gradient_reverse);
-  border: 1px solid var(--varaint);
+  box-shadow: var(--box_glow_reverse);
 }
 
 .copyright {
