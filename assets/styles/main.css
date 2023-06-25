@@ -101,6 +101,7 @@ nav li {
 .hero > div {
   height: 100%;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 h1 {
