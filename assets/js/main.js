@@ -2,7 +2,7 @@ window.onload = function () {
   // register service worker
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("/sw.js")
+      .register("/portfolio/sw.js")
       .then((reg) => {
         console.log("Service worker registered", reg);
       })

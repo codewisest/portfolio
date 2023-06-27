@@ -1,10 +1,10 @@
 {
   "name": "Chijioke Nwagwu",
   "short_name": "Web Developer",
-  "start_url": "/index.html",
+  "start_url": "/https://codewisest.github.io/",
   "display": "standalone",
-  "background_color": "#ffe9d2",
-  "theme_color": "#ffe1c4",
+  "background_color": "#101630",
+  "theme_color": "#4fb7dc",
   "orientation": "portrait-primary",
   "icons": [
     {
