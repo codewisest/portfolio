@@ -1,8 +1,9 @@
-const staticCacheName = "site-static-v1";
-const dynamicCache = "site-dynamic-v1";
+const staticCacheName = "site-static-v4";
+const dynamicCacheName = "site-dynamic-v3";
 const assets = [
   "/",
   "/index.html",
+  "/fallback.html",
   "/assets/styles/main.css",
   "/assets/styles/responsive.css",
   "/assets/js/main.js",
@@ -11,7 +12,7 @@ const assets = [
   "/assets/images/matching_card_game.PNG",
   "/assets/images/quote_generator.jpg",
 ];
-// install service worker
+// install service worker //
 self.addEventListener("install", (evt) => {
   // console.log("Service worker has been installed");
   evt.waitUntil(
@@ -29,7 +30,7 @@ self.addEventListener("activate", (evt) => {
     caches.keys().then((keys) => {
       return Promise.all(
         keys
-          .filter((key) => key !== staticCacheName)
+          .filter((key) => key !== staticCacheName && key !== dynamicCacheName)
           .map((key) => caches.delete(key))
       );
     })
@@ -40,16 +41,19 @@ self.addEventListener("activate", (evt) => {
 self.addEventListener("fetch", (evt) => {
   // console.log("fetch event", evt);
   evt.respondWith(
-    caches.match(evt.request).then((cacheResponse) => {
-      return (
-        cacheResponse ||
-        fetch(evt.request).then((fetchRes) => {
-          return caches.open(dynamicCache).then((cache) => {
-            cache.put(evt.request.url, fetchRes.clone());
-            return fetchRes;
-          });
-        })
-      );
-    })
+    caches
+      .match(evt.request)
+      .then((cacheResponse) => {
+        return (
+          cacheResponse ||
+          fetch(evt.request).then((fetchRes) => {
+            return caches.open(dynamicCacheName).then((cache) => {
+              cache.put(evt.request.url, fetchRes.clone());
+              return fetchRes;
+            });
+          })
+        );
+      })
+      .catch(() => caches.match("/fallback.html"))
   );
 });
