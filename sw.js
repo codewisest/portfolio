@@ -12,6 +12,18 @@ const assets = [
   "/assets/images/matching_card_game.PNG",
   "/assets/images/quote_generator.jpg",
 ];
+
+// Cache size limit function
+const limitCacheSize = (name, size) => {
+  caches.open(name).then((cache) => {
+    cache.keys().then((keys) => {
+      if (keys.length > size) {
+        cache.delete(keys[0]).then(limitCacheSize(name, size));
+      }
+    });
+  });
+};
+
 // install service worker //
 self.addEventListener("install", (evt) => {
   // console.log("Service worker has been installed");
@@ -49,6 +61,7 @@ self.addEventListener("fetch", (evt) => {
           fetch(evt.request).then((fetchRes) => {
             return caches.open(dynamicCacheName).then((cache) => {
               cache.put(evt.request.url, fetchRes.clone());
+              limitCacheSize(dynamicCacheName, 20);
               return fetchRes;
             });
           })
