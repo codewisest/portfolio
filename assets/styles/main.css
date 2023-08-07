@@ -66,15 +66,15 @@ p {
 
 section:not(:first-child),
 footer {
-  margin-top: 8rem;
+  margin-top: 8em;
 }
 
 .container {
-  padding: 1rem;
+  padding: 1em;
 }
 /* HEADER SECTION */
 header > .container {
-  height: 80vh;
+  height: 80%;
 }
 .header_top {
   justify-content: space-between;
@@ -102,12 +102,12 @@ nav li {
 .hero > div {
   height: 100%;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 1em;
 }
 
 h1 {
   font-family: "Source Serif 4", serif;
-  font-size: 5rem;
+  font-size: 5em;
   line-height: 4.3rem;
   letter-spacing: 3px;
 }
