@@ -138,6 +138,7 @@ h1 > span:first-child {
 }
 
 /* PROJECTS */
+
 .project_image {
   border: 0.4rem solid var(--accent);
   width: 70%;
@@ -148,6 +149,26 @@ h1 > span:first-child {
 
 .project_text > h4 {
   margin: 0.5rem 0;
+}
+
+.project_text > a {
+  display: flex;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-weight: bold;
+  align-items: center;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.project_text > a > span {
+  margin-left: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.project_text > a:hover {
+  font-size: 1.2rem;
 }
 
 /* TOOLS */
